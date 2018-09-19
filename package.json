@@ -2,12 +2,17 @@
   "name": "saitama-unittest",
   "version": "1.0.0",
   "description": "",
-  "bin":{
-    "ts-test":"main.js"
+  "bin": {
+    "ts-test": "main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "saitama-president",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "args": "^5.0.0",
+    "argv": "0.0.2",
+    "fs": "0.0.1-security"
+  }
 }
