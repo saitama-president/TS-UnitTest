@@ -1,0 +1,13 @@
+{
+  "name": "saitama-unittest",
+  "version": "1.0.0",
+  "description": "",
+  "bin":{
+    "ts-test":"main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "saitama-president",
+  "license": "ISC"
+}
