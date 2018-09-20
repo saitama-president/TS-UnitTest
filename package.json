@@ -11,6 +11,7 @@
   "author": "saitama-president",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^10.10.1",
     "args": "^5.0.0",
     "argv": "0.0.2",
     "fs": "0.0.1-security"
