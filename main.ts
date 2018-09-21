@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as argv from "argv";
 
-const command = process.argv[1] || "execute-test";
+const command = process.argv[2] || "execute-test";
 
 argv.option({
   name: 'year',
@@ -10,25 +10,60 @@ argv.option({
   description: 'broadcasted year.'
 });
 
+namespace TSTest{
+  export class TestCase(){
+  
+
+  }
+
+  export class Executer{
+    public static ExecuteDirectory(dir:string="./test/"){
+      
+      console.log("TEST Execute");
+
+      var tests=Array<Executer>[]
+      fs.readdir(dir, (e, files) => {
+        
+        console.dir(files);
+        files.filter(
+          filename=> /\.ts$/.test(filename)
+        ).forEach(
+          
+          file =>console.log("F:" + file)
+        )
+      });
+      
+    }
+
+    public constructor(path:string){
+      
+    }
+
+    public test(){
+      
+    }
+
+  }
+
+  export class Generator{
+  }
+
+  export class Parser{
+
+
+  }
+}
 
 
 function generate_test() {
 }
 
-function execute_test() {
-  console.log("");
-  fs.readdir("./test/", (e, f) => {
-    f.filter(filename=> /\.ts$/.test(filename))
-    .forEach(file =>console.log("F:" + f))
-  });
-}
 
-console.log("TEST START");
 
 
 
 switch (command){
-  case 'execute-test':execute_test();break;
+  case 'execute-test':TSTest.Executer.ExecuteDirectory();break;
   case 'generate-test':generate_test();break;
   default:console.log("NO Action");
 }
