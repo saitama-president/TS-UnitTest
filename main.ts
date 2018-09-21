@@ -1,4 +1,4 @@
-import * as fs from 'fs'
+import * as fs from "fs";
 import * as argv from "argv";
 
 const command = process.argv[1] || "execute-test";
